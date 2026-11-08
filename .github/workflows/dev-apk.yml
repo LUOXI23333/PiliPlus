@@ -21,7 +21,7 @@ jobs:
         shell: pwsh
         run: lib/scripts/patch.ps1 android
       - name: Build dev APK
-        run: flutter build apk --release --split-per-abi --dart-define-from-file=pili_release.json --android-project-arg dev=1
+        run: flutter build apk --release --split-per-abi --android-project-arg dev=1
       - uses: actions/upload-artifact@v4
         with:
           name: dev-apk-arm64
